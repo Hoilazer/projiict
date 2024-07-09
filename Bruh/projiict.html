@@ -1,0 +1,148 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jollibee</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+<script
+			id="sap-ui-bootstrap"
+			src="/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-modules="sap.m.library"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-preload="async" >
+		</script>
+		<script>
+			sap.ui.getCore().attachInit(function () {
+				new sap.m.Text({
+					text : "SAPUI5 is loaded successfully!"
+				}).placeAt("content");
+			});
+		</script>
+  </head>
+<body class="sapUiBody" id="content">
+    <nav class="navbar">
+      <div class="navbar-container container">
+          <input type="checkbox" name="" id="">
+          <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#food">Category</a></li>
+          </ul>
+          <img src="Jabebe.png" alt="" />
+      </div>
+  </nav>
+    <section class="showcase-area" id="showcase">
+      <div class="showcase-container">
+        <h1 class="main-title" id="home">Jollibee</h1>
+        <p>Welcome to Jollibee</p>
+        <a href="Mennu.html" class="btn btn-primary">Menu</a>
+      </div>
+    </section>
+    <section id="about">
+      <div class="about-wrapper container">
+        <div class="about-text">
+          <p class="small">About Us</p>
+          <h2>Bida ang Sarap</h2>
+          <p>
+            Jollibee Foods Corporation is a Filipino multinational company based in Pasig, Metro Manila, Philippines. 
+            JFC is the owner of the fast food brand Jollibee.
+          </p>
+        </div>
+        <div class="about-img">
+          <img src="Jabee.jfif" alt="Jabee" />
+        </div>
+      </div>
+    </section>
+    <section id="food">
+      <h2>Category</h2>
+      <div class="food-container container">
+        <div class="food-type fruite"> 
+          <div class="img-container">
+            <img src="Chikin solo.png" alt="chickin" />
+            <div class="img-content">
+              <h3>Solo Meals</h3>
+              <a
+                href="Mennu.html"
+                class="btn btn-primary"
+                target="blank"
+                >Explore</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="food-type vegetable">
+          <div class="img-container">
+            <img src="Chikin family.png" alt="chikmen" />
+            <div class="img-content">
+              <h3>Family Meals</h3>
+              <a
+                href="Mennu.html"
+                class="btn btn-primary"
+                target="blank"
+                >Explore</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="food-type grin">
+          <div class="img-container">
+            <img src="Fries.webp" alt="frois" />
+            <div class="img-content">
+              <h3>Sides</h3>
+              <a
+                href="Mennu.html"
+                class="btn btn-primary"
+                target="blank"
+                >Explore</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <h2> ©Jollibee | All right reserved</h2>
+    </footer>
+  </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          event.preventDefault();
+
+          var hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
+    });
+  </script>
+</html>
+

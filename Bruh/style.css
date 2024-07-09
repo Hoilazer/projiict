@@ -1,0 +1,22 @@
+body {
+    padding-top: 56px;
+}
+
+header {
+    background: url('images/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .btn {
+    margin-top: 20px;
+}
+
+section {
+    padding: 60px 0;
+}
